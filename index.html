@@ -275,6 +275,7 @@ body.kp #keepsake{display:block}
   .kp-page{box-shadow:none;break-after:page;page-break-after:always;zoom:1!important;margin:0}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
 }
+@media (max-width:600px){.card{width:560px;padding-left:36px;padding-right:36px}#gbfloat{zoom:.6}.sheet{zoom:.8}.timer div{padding:0 20px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}html{scroll-behavior:auto}}
 </style>
 </head>
@@ -489,7 +490,7 @@ body.kp #keepsake{display:block}
 <script>
 (function(){
   "use strict";
-  function fit(){var z=Math.min(0.765,(document.documentElement.clientWidth-24)/672);document.documentElement.style.setProperty("--z",z.toFixed(4))}
+  function fit(){var w=document.documentElement.clientWidth,z=w<=600?(w*0.8)/560:Math.min(0.765,(w-24)/672);document.documentElement.style.setProperty("--z",z.toFixed(4))}
   fit();addEventListener("resize",fit);
   var $=function(s,r){return (r||document).querySelector(s)};
   var WEDDING=Date.UTC(2027,3,22,10,0,0);              // 22 Apr 2027, 3:30 PM Sri Lanka time = 10:00 UTC
