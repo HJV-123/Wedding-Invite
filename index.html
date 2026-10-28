@@ -475,7 +475,7 @@ body.kp #keepsake{display:block}
 <script>
 (function(){
   "use strict";
-  function fit(){var z=0.85*Math.min(1,(document.documentElement.clientWidth-32)/672);document.documentElement.style.setProperty("--z",z.toFixed(4))}
+  function fit(){var z=Math.min(1,(document.documentElement.clientWidth-32)/672);document.documentElement.style.setProperty("--z",z.toFixed(4))}
   fit();addEventListener("resize",fit);
   var $=function(s,r){return (r||document).querySelector(s)};
   var WEDDING=Date.UTC(2027,3,22,10,0,0);              // 22 Apr 2027, 3:30 PM Sri Lanka time = 10:00 UTC
